@@ -1,0 +1,36 @@
+body {
+  color: #000;
+  font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#content {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  /* grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-columns: 20% 30% 50%; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.rows {
+  grid-auto-rows: minmax(200px, auto);
+  /* grid-template-rows: 200px 300px 400px 200px; */
+  /* grid-template-rows: repeat(2, minmax(200px, auto)) 100px; */
+  grid-column-gap: 10px;
+  /* Use grid-column-gap on the parent instead for gutters */
+  grid-row-gap: 10px;
+}
+
+#content div {
+  background: #3bbced;
+  color: white;
+  padding: 30px;
+  content: ' ';
+}
+
+#content div:nth-child(even) {
+  background: #777;
+}
