@@ -46,3 +46,51 @@ grid-template-rows: repeat(10, minmax(200px, auto)) 200px;
 grid-row-gap: 10px;
 /* define a dynamic row gutter */
 ```
+
+### Grid Lines
+
+```css
+grid-column-start: 1;
+grid-column-end: 3;
+/* Set a starting and stopping column position for this element */
+
+grid-column: 1/3;
+/* Shorthand for grid-column-start/end */
+
+grid-row: 2/4;
+/* Start element on the 2nd row, and end at the beginning of the 4th */
+```
+
+### Nested Grids
+
+```html
+<div id="content">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div class="nested">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+  </div>
+  <div>5</div>
+  <div>6</div>
+</div>
+```
+
+```css
+.nested {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-column: span 2;
+}
+
+.nested p {
+  background: lightgray;
+  color: black;
+  padding: 20px;
+  margin: 0;
+}
+```
