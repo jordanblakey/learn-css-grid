@@ -94,3 +94,29 @@ grid-row: 2/4;
   margin: 0;
 }
 ```
+
+### Align & Justify Items
+
+```css
+#content {
+  align-items: stretch; /* Default */
+  align-items: start;
+  align-items: end;
+  justify-items: stretch; /* Default */
+  justify-items: start;
+  justify-items: end;
+}
+
+#content.align-and-justify div:nth-child(3n) {
+  align-self: end;
+  justify-self: end;
+}
+#content.align-and-justify div:nth-child(3n - 1) {
+  align-self: center;
+  justify-self: center;
+}
+#content.align-and-justify div:nth-child(3n - 2) {
+  align-self: start;
+  justify-self: start;
+}
+```

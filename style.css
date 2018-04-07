@@ -90,3 +90,27 @@ body {
 }
 
 /* ALIGN AND JUSTIFY */
+#content.align-and-justify {
+  grid-auto-rows: minmax(150px, auto);
+  align-items: stretch; /* Default */
+  align-items: start;
+  align-items: end;
+  justify-items: stretch; /* Default */
+  justify-items: start;
+  justify-items: end;
+}
+/* Rules for all direct children */
+
+#content.align-and-justify div:nth-child(3n) {
+  align-self: end;
+  justify-self: end;
+}
+#content.align-and-justify div:nth-child(3n - 1) {
+  align-self: center;
+  justify-self: center;
+}
+#content.align-and-justify div:nth-child(3n - 2) {
+  align-self: start;
+  justify-self: start;
+}
+/* Rules for individual children */
